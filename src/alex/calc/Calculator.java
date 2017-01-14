@@ -1,3 +1,4 @@
+package alex.calc;
 
 /*
  * Author: Alex Matthews
@@ -19,7 +20,6 @@ public class Calculator extends JFrame implements Runnable {
 
 	private MemoryStore memoryStore = new MemoryStore();
 	private JTextPane screen;
-	private JPanel buttonPanel;
 	private JButton[] numberButtons;
 	private JButton[] operationButtons;
 	private String display = "";
@@ -82,7 +82,7 @@ public class Calculator extends JFrame implements Runnable {
 	}
 
 	private void addButtons() {
-		buttonPanel = new JPanel();
+		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(6, 5, 1, 1));
 		buttonPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
@@ -211,10 +211,7 @@ public class Calculator extends JFrame implements Runnable {
 
 	private boolean displayHasDecimal() {
 		display = screen.getText();
-		if (display.indexOf('.') != -1)
-			return true;
-		else
-			return false;
+		return display.indexOf('.') != -1;
 	}
 
 	private void equalsAction() {
@@ -246,10 +243,8 @@ public class Calculator extends JFrame implements Runnable {
 
 	private boolean screenIsEmpty() {
 		display = screen.getText().toString();
-		if (display.equals(""))
-			return true;
-		else
-			return false;
+		return display.equals("");
+
 	}
 
 }

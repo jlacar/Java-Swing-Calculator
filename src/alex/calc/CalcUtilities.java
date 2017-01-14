@@ -1,3 +1,4 @@
+package alex.calc;
 /*
  * Author: Alex Matthews
  * Ireland
