@@ -19,12 +19,10 @@ public class MemoryStore {
 		}
 
 		public void plusStoredValue(double num) {
-			
 			storedVal += num;
 		}
 
 		public void minusStoredValue(double num) {
-			
 			storedVal -= num;
 		}
 		
